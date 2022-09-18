@@ -12,3 +12,22 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+//Coздаем доступ к ul галереи 
+const galleryRef = document.querySelector('.gallery');
+// console.log("galleryRef: ", galleryRef);
+
+//Использую `шаблонные строки` метод мап и деструктуризацию для массива обьектов
+
+const allRefsImages = images.map(({url , alt }) => 
+`<li><img style ='border-radius: 12px' src="${url}" alt="${alt}" width = 250 height = 200></li>`)
+.join('');
+  // console.log("allRefsImages : ", allRefsImages);
+
+  //В ul с классом добавляю все `шаблонные строки`
+galleryRef.insertAdjacentHTML("afterbegin", allRefsImages);
+
+// Добавляю стили  
+galleryRef.setAttribute("style", "list-style-type:none; display: flex; justify-content: space-evenly;");
+
+

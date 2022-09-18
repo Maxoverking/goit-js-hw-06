@@ -7,9 +7,13 @@ const ingredients = [
   'Condiments',
 ];
 
+//Получаем доступ к ul#ingredients
 
 let ulList = document.getElementById('ingredients');
 console.log("ulList", ulList);
+
+
+// Проходим по каждому елементу в массиве  ingredients = []
 
 const vegetablesIngredients = ingredients.forEach(ingredient => {
   //Создать елементы разметки 'li'
