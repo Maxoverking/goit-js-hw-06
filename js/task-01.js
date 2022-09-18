@@ -1,12 +1,9 @@
 //Variant 1
-
-
 const numberOfCategory = document.querySelectorAll(".item");
+
 console.log('Number of categories:', numberOfCategory.length);
 
 const categoriesArray = [...numberOfCategory].map(elem => elem.children[0].textContent);
-
-console.log("categoriesArray", categoriesArray)
 
 const elementsArray = [...numberOfCategory].map(elem => elem.children[1].children.length);
 
