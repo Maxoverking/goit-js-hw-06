@@ -4,6 +4,7 @@ const numberOfCategory = document.querySelectorAll(".item");
 console.log('Number of categories:', numberOfCategory.length);
 
 const categoriesArray = [...numberOfCategory].map(elem => elem.children[0].textContent);
+// console.log(categoriesArray);
 
 const elementsArray = [...numberOfCategory].map(elem => elem.children[1].children.length);
 
@@ -38,4 +39,10 @@ console.log(`Elements: `, elementsArray[2] );
 // const el_3 = numberOfCategory[2].querySelectorAll('li');
 // console.log("Category :", category[2].textContent);
 // console.log("Elements:", el_3.length);
+//===============================================================
 
+
+// const categoriesArray = [...numberOfCategory].map(elem => 
+//     `Category : ${elem.children[0].textContent}
+// Elements: ${elem.children[1].children.length}`).join('\n');
+// console.log(categoriesArray);

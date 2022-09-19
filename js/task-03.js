@@ -30,4 +30,3 @@ galleryRef.insertAdjacentHTML("afterbegin", allRefsImages);
 // Добавляю стили  
 galleryRef.setAttribute("style", "list-style-type:none; display: flex; justify-content: space-evenly;");
 
-
