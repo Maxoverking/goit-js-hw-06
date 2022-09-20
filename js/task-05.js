@@ -4,11 +4,11 @@
 
 let inputText = document.getElementById('name-input');
 
-console.log("inputText", inputText);
+// console.log("inputText", inputText);
 
 let outputText = document.getElementById('name-output');
 
-console.log("outputText", outputText);
+// console.log("outputText", outputText);
 
 inputText.oninput = function () {
     if (inputText.value === '') {
@@ -17,6 +17,4 @@ inputText.oninput = function () {
         outputText.innerHTML = inputText.value;
     }
 };
-
-
 
