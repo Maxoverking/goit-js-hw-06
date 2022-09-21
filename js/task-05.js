@@ -3,18 +3,15 @@
 // Если инпут пустой, в спане должна отображаться строка "Anonymous".
 
 let inputText = document.getElementById('name-input');
-
-// console.log("inputText", inputText);
-
 let outputText = document.getElementById('name-output');
 
-// console.log("outputText", outputText);
+inputText.addEventListener('input', typingText)
 
-inputText.oninput = function () {
+function typingText () {
+
     if (inputText.value === '') {
         outputText.innerHTML = "Anonymous";
-    } else {
+    }else{
         outputText.innerHTML = inputText.value;
     }
 };
-

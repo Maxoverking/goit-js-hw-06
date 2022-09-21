@@ -9,11 +9,11 @@
 
 
 let inputFont = document.querySelector('#font-size-control');
-
 let text = document.getElementById('text');
 
 inputFont.addEventListener('input',inputRange);
 
 function inputRange(){
     text.style.fontSize = inputFont.value + "px";
+    // console.log("inputFont.value", inputFont.value );
 }

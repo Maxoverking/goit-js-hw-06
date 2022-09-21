@@ -4,8 +4,6 @@
 //Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
 //Если введено подходящее количество символов, то border инпута 
 //становится зелёным, если неправильное - красным.
-//Для добавления стилей, используй CSS-классы valid и invalid, 
-//которые мы уже добавили в исходные файлы задания.
 
 {/* <input type="text" id="validation-input" data-length="6"
 placeholder="Please enter 6 symbols"/> */}
@@ -13,26 +11,23 @@ placeholder="Please enter 6 symbols"/> */}
 //Для добавления стилей, используй CSS-классы valid и invalid, 
 //которые мы уже добавили в исходные файлы задания.
 
-let inputForm = document.getElementById('validation-input');
-console.log("inputForm", inputForm);
+const inputForm = document.getElementById('validation-input');
 
-let inputLength = inputForm.getAttribute('data-length');
-console.log("inputValue", inputLength);
+inputForm.addEventListener( 'blur', lostFocus);
 
-let inputLengthNum = parseInt(inputLength, 10);
-console.log("inputLengthNum", inputLengthNum);
+function lostFocus() {
+    let inputFormLength = inputForm.value.length;
+    let inputLengthData = Number(inputForm.dataset.length);
 
-inputForm.oninput = function() {
-    if (inputForm.value.length === inputLengthNum) {
+    if (inputFormLength === inputLengthData) {
         inputForm.classList.remove('invalid');
         inputForm.classList.add('valid');
     }
-    if (inputForm.value.length === 0) {
+    if (inputFormLength === 0) {
         inputForm.classList.remove('valid');
         inputForm.classList.add('invalid');
     }
-     if (inputForm.value.length !== 0 && inputForm.value.length !== inputLengthNum ) {
+     if (inputFormLength !== 0 && inputFormLength !== inputLengthData ) {
         inputForm.classList.add('invalid');
     }
 };
-

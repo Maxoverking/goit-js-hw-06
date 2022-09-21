@@ -18,10 +18,8 @@ const galleryRef = document.querySelector('.gallery');
 // console.log("galleryRef: ", galleryRef);
 
 //Использую `шаблонные строки` метод мап и деструктуризацию для массива обьектов
-
 const allRefsImages = images.map(({url , alt }) => 
-`<li><img style ='border-radius: 12px' src="${url}" alt="${alt}" width = 250 height = 200></li>`)
-.join('');
+`<li><img style ='border-radius: 12px' src="${url}" alt="${alt}" width = 250 height = 200></li>`).join('');
   // console.log("allRefsImages : ", allRefsImages);
 
   //В ul с классом добавляю все `шаблонные строки`
