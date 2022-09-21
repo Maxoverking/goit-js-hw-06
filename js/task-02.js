@@ -1,11 +1,4 @@
-const ingredients = [
-  'Potatoes',         
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
-];
+const ingredients = ['Potatoes','Mushrooms','Garlic','Tomatos','Herbs','Condiments'];
 //Получаем доступ к ul#ingredients
 let ulList = document.getElementById('ingredients');
 // console.log("ulList", ulList);
