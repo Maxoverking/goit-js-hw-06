@@ -6,12 +6,12 @@
 //Обновляй интерфейс новым значением переменной counterValue.
 
 const buttons = {
-    minusValue : document.querySelector('[data-action="decrement"]'),
-    plusValue : document.querySelector('[data-action="increment"]'),
+    minusBtn : document.querySelector('[data-action="decrement"]'),
+    plusBtn : document.querySelector('[data-action="increment"]'),
     valueNum : document.getElementById('value'),};
 // console.log("buttons", buttons);
-buttons.minusValue.addEventListener('click', decrement);
-buttons.plusValue.addEventListener('click', increment);
+buttons.minusBtn.addEventListener('click', decrement);
+buttons. plusBtn.addEventListener('click', increment);
 
 let counterValue = 0;
 
