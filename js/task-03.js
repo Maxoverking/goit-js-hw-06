@@ -14,17 +14,17 @@ const images = [
 ];
 
 //Coздаем доступ к ul галереи 
-const galleryRef = document.querySelector('.gallery');
+const galleryEl = document.querySelector('.gallery');
 // console.log("galleryRef: ", galleryRef);
 
 //Использую `шаблонные строки` метод мап и деструктуризацию для массива обьектов
-const allRefsImages = images.map(({url , alt }) => 
+const allImagesValues = images.map(({url , alt }) => 
 `<li><img style ='border-radius: 12px' src="${url}" alt="${alt}" width = 250 height = 200></li>`).join('');
   // console.log("allRefsImages : ", allRefsImages);
 
   //В ul с классом добавляю все `шаблонные строки`
-galleryRef.insertAdjacentHTML("afterbegin", allRefsImages);
+galleryEl.insertAdjacentHTML("afterbegin", allImagesValues);
 
 // Добавляю стили  
-galleryRef.setAttribute("style", "list-style-type:none; display: flex; justify-content: space-evenly;");
+galleryEl.setAttribute("style", "list-style-type:none; display: flex; justify-content: space-evenly;");
 

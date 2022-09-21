@@ -17,9 +17,9 @@ inputForm.addEventListener( 'blur', lostFocus);
 
 function lostFocus() {
     let inputFormLength = inputForm.value.length;
-    let inputLengthData = Number(inputForm.dataset.length);
+    let inputDataLength = Number(inputForm.dataset.length);
 
-    if (inputFormLength === inputLengthData) {
+    if (inputFormLength === inputDataLength) {
         inputForm.classList.remove('invalid');
         inputForm.classList.add('valid');
     }
@@ -27,7 +27,7 @@ function lostFocus() {
         inputForm.classList.remove('valid');
         inputForm.classList.add('invalid');
     }
-     if (inputFormLength !== 0 && inputFormLength !== inputLengthData ) {
+     if (inputFormLength !== 0 && inputFormLength !== inputDataLength ) {
         inputForm.classList.add('invalid');
     }
 };

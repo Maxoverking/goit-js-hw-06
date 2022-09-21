@@ -3,17 +3,11 @@
 //(событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. 
 //В результате при перетаскивании ползунка будет меняться размер текста.
 
-//<input id="font-size-control" type="range" min="16" max="96" />
-//<br />
-//<span id="text">Abracadabra!</span>
-
-
-let inputFont = document.querySelector('#font-size-control');
+let inputFontElements = document.querySelector('#font-size-control');
 let text = document.getElementById('text');
 
-inputFont.addEventListener('input',inputRange);
+inputFontElements.addEventListener('input',rangeControl);
 
-function inputRange(){
-    text.style.fontSize = inputFont.value + "px";
-    // console.log("inputFont.value", inputFont.value );
+function rangeControl(){
+    text.style.fontSize = inputFontElements.value + "px";
 }

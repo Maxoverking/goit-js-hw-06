@@ -11,7 +11,7 @@ const buttons = {
     valueNum : document.getElementById('value'),};
 // console.log("buttons", buttons);
 buttons.minusBtn.addEventListener('click', decrement);
-buttons. plusBtn.addEventListener('click', increment);
+buttons.plusBtn.addEventListener('click', increment);
 
 let counterValue = 0;
 

@@ -2,16 +2,15 @@
 // input#name-input (событие input), подставляет его текущее значение в span#name-output. 
 // Если инпут пустой, в спане должна отображаться строка "Anonymous".
 
-let inputText = document.getElementById('name-input');
-let outputText = document.getElementById('name-output');
+let inputElement = document.getElementById('name-input');
+let outputElement = document.getElementById('name-output');
 
-inputText.addEventListener('input', typingText)
+inputElement.addEventListener('input', checkInputValue);
 
-function typingText () {
-
-    if (inputText.value === '') {
-        outputText.innerHTML = "Anonymous";
+function checkInputValue () {
+    if (inputElement.value === '') {
+        outputElement.innerHTML = "Anonymous";
     }else{
-        outputText.innerHTML = inputText.value;
+        outputElement.innerHTML = inputElement.value;
     }
 };
