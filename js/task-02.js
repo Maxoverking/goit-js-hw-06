@@ -27,6 +27,6 @@ const vegetablesIngredients = ingredients.forEach( ingredient => {
 // const ulEl = document.querySelector('#ingredients');
 
 // const list = ingredients.reduce((str, item) => str + `<li>${item}</li>`, '');
-// console.log("🚀 list", list)
+// console.log("list", list)
 
 // ulEl.innerHTML = list;

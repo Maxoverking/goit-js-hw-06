@@ -5,6 +5,7 @@ console.log(' ');
 
 categories.forEach(category => {
     const childrenGroup = [...category.children];
+    // console.log("childrenGroup", childrenGroup)
 
     childrenGroup.forEach(element => {
         // console.log(element.tagName);
@@ -13,6 +14,7 @@ categories.forEach(category => {
         }
     });
     childrenGroup.forEach(element => {
+        // console.log( element.children);
         if (element.tagName === 'UL') {
             console.log(`Elements: ${element.children.length}`);
         }
