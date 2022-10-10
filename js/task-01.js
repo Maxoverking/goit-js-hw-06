@@ -1,16 +1,17 @@
 const categories = document.querySelectorAll('.item');
+
 console.log(`Number of categories: ${categories.length}`);
 
 console.log(' ');
 
 categories.forEach(category => {
     const childrenGroup = [...category.children];
-    // console.log("childrenGroup", childrenGroup)
+    // console.log("childrenGroup", childrenGroup);
 
     childrenGroup.forEach(element => {
         // console.log(element.tagName);
         if (element.tagName === 'H2') {
-            console.log(`Category : ${element.textContent}`);
+            console.log(`Category : ${element.textContent }`);
         }
     });
     childrenGroup.forEach(element => {

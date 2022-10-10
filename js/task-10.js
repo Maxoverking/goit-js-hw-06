@@ -5,8 +5,9 @@ let boxes = document.getElementById('boxes');
 create.addEventListener('click', getAmount);
 destroy.addEventListener('click', destroyBoxes);
 
+
 function getAmount() {
-  let amount = +document.querySelector('#controls input').value;
+  let amount = document.querySelector('#controls input').value;
   
   createBoxes(amount);
 }
