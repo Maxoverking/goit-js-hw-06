@@ -22,7 +22,7 @@ const allImagesValues = images.map(({url , alt }) =>
 `<li><img style ='border-radius: 12px' src="${url}" alt="${alt}" width = 250 height = 200></li>`).join('');
   // console.log("allRefsImages : ", allRefsImages);
 
-  //В ul с классом добавляю все `шаблонные строки`
+  //В ul с классом добавляю все `шаблонные строки` которые вернул мап
 galleryEl.insertAdjacentHTML("afterbegin", allImagesValues);
 
 // Добавляю стили  
