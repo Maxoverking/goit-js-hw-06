@@ -20,7 +20,7 @@ const galleryEl = document.querySelector('.gallery');
 //Использую `шаблонные строки` метод мап и деструктуризацию для массива обьектов
 const allImagesValues = images.map(({url , alt }) => 
 `<li><img style ='border-radius: 12px' src="${url}" alt="${alt}" width = 250 height = 200></li>`).join('');
-  // console.log("allRefsImages : ", allRefsImages);
+  // console.log("allRefsImages : ", allImagesValues);
 
   //В ul с классом добавляю все `шаблонные строки` которые вернул мап
 galleryEl.insertAdjacentHTML("afterbegin", allImagesValues);
